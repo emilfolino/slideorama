@@ -1,3 +1,3 @@
 # slideorama.js
 
-Slides in 36 lines of JavaScript.
+Slides in 70 lines of JavaScript.

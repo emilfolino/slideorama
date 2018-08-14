@@ -40,10 +40,18 @@ p {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    position: relative;
 }
 
 .fade-in {animation: fade-in 1s ease-out; }
 @keyframes fade-in {
     from {opacity:0;}
     to {opacity:1;}
+}
+
+.timer {
+    font-size: 3.25em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
