@@ -11,23 +11,25 @@
     document.addEventListener("keyup", keyPressed);
 
     function keyPressed(key) {
-        if (key.code === "Enter" || key.code === "ArrowRight") {
-            counter++;
-        }
+        if (key.code === "Enter" || key.code === "ArrowRight" || key.code === "ArrowLeft") {
+            if (key.code === "Enter" || key.code === "ArrowRight") {
+                counter++;
+            }
 
-        if (key.code === "ArrowLeft") {
-            counter--;
-        }
+            if (key.code === "ArrowLeft") {
+                counter--;
+            }
 
-        if (counter > numberOfSlides - 1) {
-            counter = 0;
-        }
+            if (counter > numberOfSlides - 1) {
+                counter = 0;
+            }
 
-        if (counter < 0) {
-            counter = numberOfSlides - 1;
-        }
+            if (counter < 0) {
+                counter = numberOfSlides - 1;
+            }
 
-        showSlide(counter);
+            showSlide(counter);
+        }
     }
 
     function showSlide(index) {
