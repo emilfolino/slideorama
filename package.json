@@ -1,6 +1,6 @@
 {
   "name": "slideorama",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Slides in 84 lines of JavaScript.",
   "main": "slideorama.min.js",
   "scripts": {
