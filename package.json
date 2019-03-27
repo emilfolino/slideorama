@@ -2,9 +2,12 @@
   "name": "slideorama",
   "version": "1.0.0",
   "description": "Slides in 84 lines of JavaScript.",
-  "main": "slideorama.js",
+  "main": "slideorama.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run eslint && npm run stylelint",
+    "eslint": "eslint .",
+    "stylelint": "stylelint **/*.css",
+    "minify": "terser slideorama.js -o slideorama.min.js -c -m"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/emilfolino/slideorama/issues"
   },
-  "homepage": "https://github.com/emilfolino/slideorama#readme"
+  "homepage": "https://github.com/emilfolino/slideorama#readme",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-plugin-react": "^7.12.4",
+    "javascript-style-guide": "^1.0.1",
+    "stylelint": "^9.10.1",
+    "terser": "^3.17.0"
+  }
 }

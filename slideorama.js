@@ -66,6 +66,7 @@ var slideorama = (function () {
         }
 
         var newTime = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
         timer.innerHTML = newTime;
 
         if (minutes < 0) {
