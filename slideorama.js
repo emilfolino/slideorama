@@ -1,14 +1,12 @@
 "use strict";
 
-(function() {
+var slideorama = (function () {
     var counter = 0;
-    var presentation = document.getElementById("presentation");
-    var slides = document.getElementById("slide-container").children;
-    var numberOfSlides = slides.length;
+    var presentation;
+    var slides;
+    var numberOfSlides;
     var timerInterval;
     var timer;
-
-    document.addEventListener("keyup", keyPressed);
 
     function keyPressed(key) {
         if (key.code === "Enter" || key.code === "ArrowRight" || key.code === "ArrowLeft") {
@@ -36,6 +34,14 @@
         presentation.innerHTML = slides[index].outerHTML;
         clearInterval(timerInterval);
         addTimer();
+    }
+
+    function init(presentationId, slidesId) {
+        presentation = document.getElementById(presentationId);
+        slides = document.getElementById(slidesId).children;
+        numberOfSlides = slides.length;
+        document.addEventListener("keyup", keyPressed);
+        showSlide(counter);
     }
 
     function addTimer() {
@@ -68,5 +74,11 @@
         }
     }
 
-    showSlide(counter);
+    var publicAPI = {
+        init: init
+    };
+
+    return publicAPI;
 })();
+
+export default slideorama;

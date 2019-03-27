@@ -30,6 +30,9 @@ p {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    background-color: #323330;
+    color: #f0db4f;
+    font-family: sans-serif;
 }
 
 .slide-container {
@@ -52,6 +55,6 @@ p {
 .timer {
     font-size: 3.25em;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
 }
