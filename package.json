@@ -25,6 +25,6 @@
     "eslint-plugin-react": "^7.12.4",
     "javascript-style-guide": "^1.0.1",
     "stylelint": "^9.10.1",
-    "terser": "^3.17.0"
+    "terser": "^4.8.1"
   }
 }
